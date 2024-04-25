@@ -5,8 +5,10 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 from tensorflow.keras.layers import Conv2D, BatchNormalization, Activation, MaxPool2D, Conv2DTranspose, Concatenate, Input
 from tensorflow.keras.models import Model
 
+
+
 def conv_block(inputs, num_filters):
-    x = Conv2D(num_filters, 3, padding="same")(inputs)
+    x = Conv2D(num_filters, 3, padding="same")(inputs)#filters,kernels,padding,input
     x = BatchNormalization()(x)
     x = Activation("relu")(x)
 
